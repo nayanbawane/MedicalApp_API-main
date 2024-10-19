@@ -12,5 +12,12 @@ public class UserController {
 		return "Nayan Bawane";
 		
 	}
+	
+	@GetMapping("/nayan1")
+	public String getData1()
+	{
+		return "Nayan Bawane1";
+		
+	}
 
 }
