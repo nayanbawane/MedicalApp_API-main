@@ -1,0 +1,18 @@
+server:
+  port: 5050
+  
+
+spring:
+  application:
+    name: MedicalApp_API-main
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 161718
+    url: jdbc:mysql://localhost:3306/android_api?createDatabaseIfNotExist=true
+    username: root
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
