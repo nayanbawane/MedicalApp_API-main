@@ -1,0 +1,9 @@
+package com.example.MedicalApp.User_Module.Controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+
+
+}
