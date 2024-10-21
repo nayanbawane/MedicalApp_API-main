@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     //update user
     @Override
     public Optional<User> updateUserDetail(User user, String user_id) {
-        Optional<User> user1 = Optional.ofNullable(userRepo.findUserByUser_userid(user_id));
+        Optional<User> user1 = Optional.ofNullable(userRepo.findByUser_userid(user_id));
         if (user1.isPresent()) {
 //            user1.get().setId(user1.get().getId());
 //            user1.get().setUser_id(user1.get().getUser_id());
@@ -47,14 +47,13 @@ public class UserServiceImpl implements UserService {
             user1.get().setIsApproved(user.getIsApproved());
             user1.get().setBlock(user.getBlock());
             userRepo.save(user1.get());
-
         }
-
         return user1;
     }
 
+
     @Override
-    public String findUserByUser_email(String email, String password) {
+    public String findUserByUser_email_password(String email, String password) {
         Optional<User> user1 = Optional.ofNullable(userRepo.findUserByUser_email(email, password));
         if (user1.isPresent()) {
 
@@ -65,5 +64,13 @@ public class UserServiceImpl implements UserService {
         return "User Login unsuccessfully";
     }
 
+    @Override
+    public void deleteUserBy_id(Integer id) {
+        userRepo.deleteById(id);
+    }
 
+    @Override
+    public void deleteUserBy_user_id(String user_id) {
+        userRepo.deleteByUser_id(user_id);
+    }
 }
