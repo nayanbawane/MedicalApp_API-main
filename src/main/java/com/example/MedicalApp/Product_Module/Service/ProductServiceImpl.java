@@ -2,7 +2,6 @@ package com.example.MedicalApp.Product_Module.Service;
 
 import com.example.MedicalApp.Product_Module.Entity.Product;
 import com.example.MedicalApp.Product_Module.Repo.ProductRepo;
-import com.example.MedicalApp.Product_Module.Entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

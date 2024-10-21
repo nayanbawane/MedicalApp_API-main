@@ -3,7 +3,7 @@ package com.example.MedicalApp.Product_Module.Controller;
 import com.example.MedicalApp.Product_Module.Entity.Product;
 import com.example.MedicalApp.Product_Module.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
