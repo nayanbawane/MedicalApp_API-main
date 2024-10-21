@@ -19,12 +19,7 @@ public interface UserService {
     //auth user
     String findUserByUser_email_password(String email, String password);
 
-
-    // Delete operation
-    void deleteUserBy_id(Integer id);
-
     // Delete operation by user_id
     void deleteUserBy_user_id(String user_id);
-
 
 }

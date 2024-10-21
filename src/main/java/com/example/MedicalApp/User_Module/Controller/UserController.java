@@ -1,7 +1,7 @@
 package com.example.MedicalApp.User_Module.Controller;
 
 import com.example.MedicalApp.User_Module.Entity.User;
-import com.example.MedicalApp.User_Module.Repo.UserRepo;
+
 import com.example.MedicalApp.User_Module.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
