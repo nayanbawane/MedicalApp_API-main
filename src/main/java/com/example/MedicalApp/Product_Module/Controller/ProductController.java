@@ -13,6 +13,7 @@ import java.util.Optional;
 import static org.springframework.http.HttpStatus.*;
 
 @RestController
+@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
@@ -33,6 +34,12 @@ public class ProductController {
         return productService.getAllProduct();
     }
 
+    @GetMapping("/getProduct/{product_id}")
+    public Product getSpecificProductItem(@PathVariable("product_id") String product_id)
+    {
+        return productService.getSpecificProduct(product_id);
+    }
+
     //update product detail
     @PatchMapping("/updateProduct/{product_id}")
     public ResponseEntity<Optional<Product>> updateUserDetail(@RequestBody Product product, @PathVariable("product_id") String product_id)
@@ -41,6 +48,11 @@ public class ProductController {
     }
 
     //Delete By id
+    @DeleteMapping("/delete/{product_id}")
+    public String deleteProduct(@PathVariable("product_id") String product_id) {
+        productService.deleteProductBy_product_id(product_id);
+        return  "Product id and product item delete Successfull"+product_id;
+    }
 
 
 

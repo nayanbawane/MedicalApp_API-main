@@ -29,6 +29,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Product getSpecificProduct(String product_id) {
+        return productRepo.findProductByProduct_id(product_id);
+    }
+
+    @Override
     public Optional<Product> updateProductDetail(Product product, String product_id) {
         Optional<Product> product1 = Optional.ofNullable(productRepo.findProductByProduct_id(product_id));
         if (product1.isPresent()) {
@@ -48,7 +53,9 @@ public class ProductServiceImpl implements ProductService {
 
         return product1;
     }
-    
 
-
+    @Override
+    public void deleteProductBy_product_id(String product_id) {
+            productRepo.deleteByProduct_id(product_id);
+    }
 }

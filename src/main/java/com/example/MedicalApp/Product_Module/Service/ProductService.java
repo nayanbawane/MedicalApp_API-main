@@ -10,11 +10,17 @@ public interface ProductService {
     //save operation
     Product saveProduct(Product product);
 
-    // Read operation
+    // Read All operation
     List<Product> getAllProduct();
+
+    // Read specific operation
+    Product getSpecificProduct(String product_id);
 
     // Update operation
     Optional<Product> updateProductDetail(Product product, String product_id);
+
+    //Delete Operation
+    void deleteProductBy_product_id(String product_id);
 
 
 }

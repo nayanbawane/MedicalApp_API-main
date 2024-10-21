@@ -64,10 +64,6 @@ public class UserServiceImpl implements UserService {
         return "User Login unsuccessfully";
     }
 
-    @Override
-    public void deleteUserBy_id(Integer id) {
-        userRepo.deleteById(id);
-    }
 
     @Override
     public void deleteUserBy_user_id(String user_id) {
