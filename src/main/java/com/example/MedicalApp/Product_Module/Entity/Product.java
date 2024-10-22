@@ -52,7 +52,4 @@ public class Product {
     private String product_power;
 
 
-
-
-
 }

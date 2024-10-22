@@ -40,19 +40,19 @@ public class UserController {
     }
 
 
-
-    @DeleteMapping("/delete/{user_id}")
-    public String deleteFile(@PathVariable("user_id") String user_id) {
-        userService.deleteUserBy_user_id(user_id);
-        return  "User id delete Successfull "+user_id;
-    }
-
-
     //update user detail
     @PatchMapping("/user/{user_id}")
     public ResponseEntity<Optional<User>> updateUserDetail(@RequestBody User user,
                                                            @PathVariable("user_id") String user_id) {
         return new ResponseEntity<Optional<User>>(userService.updateUserDetail(user, user_id), HttpStatus.OK);
+    }
+
+
+
+    @DeleteMapping("/delete/{user_id}")
+    public String deleteFile(@PathVariable("user_id") String user_id) {
+        userService.deleteUserBy_user_id(user_id);
+        return  "User id delete Successfull "+user_id;
     }
 
 
