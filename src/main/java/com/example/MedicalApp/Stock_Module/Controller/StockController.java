@@ -27,7 +27,7 @@ public class StockController {
     //get all stock
     @GetMapping("/getallstock")
     public List<Stock> getAllStockList() {
-        return (List<Stock>) stockService.getAllStock();
+        return stockService.getAllStock();
     }
 
 
@@ -39,8 +39,10 @@ public class StockController {
     }
 
 
+
+    //delete stock
     @DeleteMapping("/delete/{id}")
-    public String deleteFile(@PathVariable("id") Integer id) {
+    public String deletestockFile(@PathVariable("id") Integer id) {
         stockService.deleteStockById(id);
         return  "Stock id "+id+" delete Successfull";
     }
