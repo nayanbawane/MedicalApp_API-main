@@ -38,6 +38,7 @@ public class UserServiceImpl implements UserService {
 //            user1.get().setUser_id(user1.get().getUser_id());
 //            user1.get().setDate_of_account_creation(user1.get().getDate_of_account_creation());
 
+            user1.get().setLevel(user.getLevel());
             user1.get().setPassword(user.getPassword());
             user1.get().setName(user.getName());
             user1.get().setEmail(user.getEmail());

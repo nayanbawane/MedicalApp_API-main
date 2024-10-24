@@ -47,9 +47,7 @@ public class ProductServiceImpl implements ProductService {
             product1.get().setProduct_image(product.getProduct_image());
             product1.get().setProduct_power(product.getProduct_power());
             productRepo.save(product1.get());
-
         }
-
         return product1;
     }
 

@@ -41,7 +41,7 @@ public class UserController {
 
 
     //update user detail
-    @PatchMapping("/user/{user_id}")
+    @PatchMapping("/{user_id}")
     public ResponseEntity<Optional<User>> updateUserDetail(@RequestBody User user,
                                                            @PathVariable("user_id") String user_id) {
         return new ResponseEntity<Optional<User>>(userService.updateUserDetail(user, user_id), HttpStatus.OK);
